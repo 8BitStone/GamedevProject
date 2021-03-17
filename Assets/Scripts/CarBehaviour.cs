@@ -49,7 +49,7 @@ public class CarBehaviour : MonoBehaviour
 
    void SetSteerAngle(float angle)
    {
-      float speedClampedMaxAngle = maxSteerAngle * (_isHeadingForward ? 1 - _currentSpeedKMH / (1.2f * MaxSpeedKmh) : 1 - _currentSpeedKMH / (1.2f * MaxReverseSpeedKmh));
+      float speedClampedMaxAngle = maxSteerAngle * (_isHeadingForward ? 1 - _currentSpeedKMH / (1.1f * MaxSpeedKmh) : 1 - _currentSpeedKMH / (1.1f * MaxReverseSpeedKmh));
       angle = Mathf.Clamp(angle, -speedClampedMaxAngle, speedClampedMaxAngle);
       wheelColliderFL.steerAngle = angle;
       wheelColliderFR.steerAngle = angle;
