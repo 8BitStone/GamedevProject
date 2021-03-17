@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<varlist name="ProjectData">
+	<int name="FileVersion">1</int>
+	<varlist name="MapInfo">
+		<varlist name="Terrain">
+			<float name="HorizScale">1</float>
+		</varlist>
+		<bool name="WrapFlag">false</bool>
+	</varlist>
+	<varlist name="Maps">
+		<varlist name="DM">
+			<string name="Filename">Terrain_DM.dmf</string>
+			<string name="MapType">DM</string>
+		</varlist>
+	</varlist>
+	<varlist name="Climates">
+		<varlist name="Temperate (coastal)">
+			<string name="Filename">C:\Users\kevin\L3DT\Resources\Std 16.05.3.1\Climates\temperate26\Temperate26-coastal.cli.xml</string>
+		</varlist>
+	</varlist>
+</varlist>
