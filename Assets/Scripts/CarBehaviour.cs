@@ -36,8 +36,6 @@ public class CarBehaviour : MonoBehaviour
         _currentSpeedKMH = _rigidBody.velocity.magnitude * 3.6f;
         _isHeadingForward = Vector3.Angle(_rigidBody.velocity, transform.forward) < 90;
 
-        float accelerationModifyer = _isHeadingForward ? (_currentSpeedKMH > MaxSpeedKmh ? 0 : 1) : (_currentSpeedKMH > MaxReverseSpeedKmh ? 0 : 1);
-
         if (isBraking())
         {
             SetBreakTorque(5000);
@@ -45,6 +43,7 @@ public class CarBehaviour : MonoBehaviour
         }
         else
         {
+            float accelerationModifyer = _isHeadingForward ? (_currentSpeedKMH > MaxSpeedKmh ? 0 : 1) : (_currentSpeedKMH > MaxReverseSpeedKmh ? 0 : 1);
             SetBreakTorque(0);
             SetMotorTorque(maxTorque * Input.GetAxis("Vertical") * accelerationModifyer);
         }
@@ -64,7 +63,7 @@ public class CarBehaviour : MonoBehaviour
 
     void SetSteerAngle(float angle)
     {
-        float speedClampedMaxAngle = maxSteerAngle * (_isHeadingForward ? 1 - _currentSpeedKMH / (1.2f * MaxSpeedKmh) : 1 - _currentSpeedKMH / (1.2f * MaxReverseSpeedKmh));
+        float speedClampedMaxAngle = Mathf.Clamp(maxSteerAngle * (1 - _currentSpeedKMH / (1.2f * MaxSpeedKmh)), 0, maxSteerAngle);
         angle = Mathf.Clamp(angle, -speedClampedMaxAngle, speedClampedMaxAngle);
         wheelColliderFL.steerAngle = angle;
         wheelColliderFR.steerAngle = angle;
