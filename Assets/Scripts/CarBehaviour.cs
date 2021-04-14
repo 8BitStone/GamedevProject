@@ -21,6 +21,7 @@ public class CarBehaviour : MonoBehaviour
     public ParticleSystem smokeL;
     public ParticleSystem smokeR;
     public ParticleSystem[] dustEmissions;
+    public bool thrustEnabled;
 
 
     private float _currentSpeedKMH;
@@ -68,16 +69,19 @@ public class CarBehaviour : MonoBehaviour
         WheelHit hitFR = GetGroundInfos(ref wheelColliderFR, ref _groundTagFR, ref _groundTextureFR);
         _carIsOnDrySand = _groundTagFL.CompareTo("Terrain") == 0 && _groundTextureFL == 0;
 
-        if (isBraking())
+        if (thrustEnabled)
         {
-            SetBreakTorque(5000);
-            SetMotorTorque(0);
-        }
-        else
-        {
-            float accelerationModifyer = _isHeadingForward ? (_currentSpeedKMH > MaxSpeedKmh ? 0 : 1) : (_currentSpeedKMH > MaxReverseSpeedKmh ? 0 : 1);
-            SetBreakTorque(0);
-            SetMotorTorque(maxTorque * Input.GetAxis("Vertical") * accelerationModifyer);
+            if (isBraking())
+            {
+                SetBreakTorque(5000);
+                SetMotorTorque(0);
+            }
+            else
+            {
+                float accelerationModifyer = _isHeadingForward ? (_currentSpeedKMH > MaxSpeedKmh ? 0 : 1) : (_currentSpeedKMH > MaxReverseSpeedKmh ? 0 : 1);
+                SetBreakTorque(0);
+                SetMotorTorque(maxTorque * Input.GetAxis("Vertical") * accelerationModifyer);
+            }
         }
 
         SetSteerAngle(maxSteerAngle * Input.GetAxis("Horizontal"));
