@@ -451,7 +451,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2804491564391396462, guid: f9ded50cd6cf2c14481c1344591fddb4, type: 3}
   m_PrefabInstance: {fileID: 2804491564595415294}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 2804491564595415299}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 951d8b49d5126c248a63b5d171d78e73, type: 3}
@@ -1314,8 +1314,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1892715050}
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: -126.380005, z: -243}
+  m_LocalRotation: {x: -0.15662026, y: 0.053311612, z: 0.008476282, w: 0.98618263}
+  m_LocalPosition: {x: 576.2959, y: 25.775604, z: 1334.6937}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1514,9 +1514,45 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1275364134}
     - target: {fileID: 2804491564391396462, guid: f9ded50cd6cf2c14481c1344591fddb4, type: 3}
+      propertyPath: brakeAudioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: c4adc19566aee8a4180b161a907021fb, type: 3}
+    - target: {fileID: 2804491564391396462, guid: f9ded50cd6cf2c14481c1344591fddb4, type: 3}
       propertyPath: speedPointerTransform
       value: 
       objectReference: {fileID: 557387245}
+    - target: {fileID: 2804491564391396462, guid: f9ded50cd6cf2c14481c1344591fddb4, type: 3}
+      propertyPath: wheelBehaviours.Array.data[0]
+      value: 
+      objectReference: {fileID: 2804491564595415298}
+    - target: {fileID: 2804491564391396462, guid: f9ded50cd6cf2c14481c1344591fddb4, type: 3}
+      propertyPath: wheelBehaviours.Array.data[1]
+      value: 
+      objectReference: {fileID: 2804491564595415297}
+    - target: {fileID: 2804491564391396462, guid: f9ded50cd6cf2c14481c1344591fddb4, type: 3}
+      propertyPath: wheelBehaviours.Array.data[2]
+      value: 
+      objectReference: {fileID: 2804491564595415296}
+    - target: {fileID: 2804491564391396462, guid: f9ded50cd6cf2c14481c1344591fddb4, type: 3}
+      propertyPath: wheelBehaviours.Array.data[3]
+      value: 
+      objectReference: {fileID: 2804491564595415295}
+    - target: {fileID: 2804491564501109546, guid: f9ded50cd6cf2c14481c1344591fddb4, type: 3}
+      propertyPath: skidmarks
+      value: 
+      objectReference: {fileID: 2804491564595415300}
+    - target: {fileID: 2804491564878512642, guid: f9ded50cd6cf2c14481c1344591fddb4, type: 3}
+      propertyPath: skidmarks
+      value: 
+      objectReference: {fileID: 2804491564595415300}
+    - target: {fileID: 2804491565193041433, guid: f9ded50cd6cf2c14481c1344591fddb4, type: 3}
+      propertyPath: skidmarks
+      value: 
+      objectReference: {fileID: 2804491564595415300}
+    - target: {fileID: 2804491565964536717, guid: f9ded50cd6cf2c14481c1344591fddb4, type: 3}
+      propertyPath: skidmarks
+      value: 
+      objectReference: {fileID: 2804491564595415300}
     - target: {fileID: 3038495890528595526, guid: f9ded50cd6cf2c14481c1344591fddb4, type: 3}
       propertyPath: m_Name
       value: buggy
@@ -1539,6 +1575,71 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 5e180e56846e7b1428f8a699b2a7effc, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f9ded50cd6cf2c14481c1344591fddb4, type: 3}
+--- !u!114 &2804491564595415295 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2804491565964536717, guid: f9ded50cd6cf2c14481c1344591fddb4, type: 3}
+  m_PrefabInstance: {fileID: 2804491564595415294}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9e37c31ccc8458489c0f76b75110537, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2804491564595415296 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2804491564878512642, guid: f9ded50cd6cf2c14481c1344591fddb4, type: 3}
+  m_PrefabInstance: {fileID: 2804491564595415294}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9e37c31ccc8458489c0f76b75110537, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2804491564595415297 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2804491564501109546, guid: f9ded50cd6cf2c14481c1344591fddb4, type: 3}
+  m_PrefabInstance: {fileID: 2804491564595415294}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9e37c31ccc8458489c0f76b75110537, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2804491564595415298 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2804491565193041433, guid: f9ded50cd6cf2c14481c1344591fddb4, type: 3}
+  m_PrefabInstance: {fileID: 2804491564595415294}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9e37c31ccc8458489c0f76b75110537, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &2804491564595415299 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3038495890528595526, guid: f9ded50cd6cf2c14481c1344591fddb4, type: 3}
+  m_PrefabInstance: {fileID: 2804491564595415294}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2804491564595415300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2804491564595415299}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 895d8ef052e42d84fa155b053a8e4591, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxMarks: 1024
+  markWidth: 0.225
+  groundOffset: 0.02
+  material: {fileID: 2100000, guid: d3a5e16e1b039b14192aa8f4a966772b, type: 2}
 --- !u!1001 &8262746080765661057
 PrefabInstance:
   m_ObjectHideFlags: 0

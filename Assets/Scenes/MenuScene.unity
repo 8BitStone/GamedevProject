@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: 588ab3c29703263499b45f43450bd75b, type: 2}
   m_LightingSettings: {fileID: 0}
 --- !u!196 &4
 NavMeshSettings:
@@ -1680,6 +1680,10 @@ PrefabInstance:
       propertyPath: speedPointerTransform
       value: 
       objectReference: {fileID: 1426833566}
+    - target: {fileID: 2804491564391396462, guid: f9ded50cd6cf2c14481c1344591fddb4, type: 3}
+      propertyPath: wheelBehaviours.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3038495890528595526, guid: f9ded50cd6cf2c14481c1344591fddb4, type: 3}
       propertyPath: m_Name
       value: buggy
@@ -3803,8 +3807,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1579015019}
-  m_LocalRotation: {x: -0.15662026, y: 0.053311612, z: 0.008476282, w: 0.98618263}
-  m_LocalPosition: {x: 760.9999, y: -544.6801, z: -737.79865}
+  m_LocalRotation: {x: -0.27851358, y: 0, z: 0, w: 0.96043235}
+  m_LocalPosition: {x: 0, y: -4.57, z: -5.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
