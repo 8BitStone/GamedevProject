@@ -44,10 +44,12 @@ public class Prefs
         wheelRL.suspensionDistance = suspensionDistance;
         wheelRR.suspensionDistance = suspensionDistance;
 
-        //wheelFL.suspensionSpring = new JointSpring { spring = suspensionForce, damper = suspensionDampening, targetPosition = wheelFL.suspensionSpring.targetPosition };
-        //wheelFR.suspensionSpring = new JointSpring { spring = suspensionForce, damper = suspensionDampening, targetPosition = wheelFR.suspensionSpring.targetPosition };
-        //wheelRL.suspensionSpring = new JointSpring { spring = suspensionForce, damper = suspensionDampening, targetPosition = wheelRL.suspensionSpring.targetPosition };
-        //wheelRR.suspensionSpring = new JointSpring { spring = suspensionForce, damper = suspensionDampening, targetPosition = wheelRR.suspensionSpring.targetPosition };
+        Debug.Log(wheelFL.suspensionSpring.damper);
+
+        wheelFL.suspensionSpring = new JointSpring { spring = suspensionForce, damper = suspensionDampening, targetPosition = wheelFL.suspensionSpring.targetPosition };
+        wheelFR.suspensionSpring = new JointSpring { spring = suspensionForce, damper = suspensionDampening, targetPosition = wheelFR.suspensionSpring.targetPosition };
+        wheelRL.suspensionSpring = new JointSpring { spring = suspensionForce, damper = suspensionDampening, targetPosition = wheelRL.suspensionSpring.targetPosition };
+        wheelRR.suspensionSpring = new JointSpring { spring = suspensionForce, damper = suspensionDampening, targetPosition = wheelRR.suspensionSpring.targetPosition };
     }
 
     public void SetColor(ref Material carMaterial)

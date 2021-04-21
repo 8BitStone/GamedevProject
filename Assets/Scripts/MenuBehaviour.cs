@@ -13,10 +13,16 @@ public class MenuBehaviour : MonoBehaviour
 
     public Material carMaterial;
 
+    public Slider sldDistance;
+    public Slider sldForce;
+    public Slider sldDampening;
     public Text txtDistance;
     public Text txtForce;
     public Text txtDampening;
 
+    public Slider sldHue;
+    public Slider sldSaturation;
+    public Slider sldValue;
     public Text txtHue;
     public Text txtSaturation;
     public Text txtValue;
@@ -28,6 +34,22 @@ public class MenuBehaviour : MonoBehaviour
         _prefs = new Prefs();
         _prefs.Load();
         _prefs.SetAll(ref wheelColliderFL, ref wheelColliderFR, ref wheelColliderRL, ref wheelColliderRR, ref carMaterial);
+
+        sldDistance.value   = _prefs.suspensionDistance;
+        sldForce.value      = _prefs.suspensionForce;
+        sldDampening.value  = _prefs.suspensionDampening;
+
+        sldHue.value        = _prefs.hue;
+        sldSaturation.value = _prefs.saturation;
+        sldValue.value      = _prefs.value;
+
+        OnSliderChangedSuspDistance(sldDistance.value);
+        OnSliderChangedSuspForce(sldForce.value);
+        OnSliderChangedSuspDampening(sldDampening.value);
+
+        OnSliderChangedHue(sldHue.value);
+        OnSliderChangedSaturation(sldSaturation.value);
+        OnSliderChangedValue(sldValue.value);
     }
 
     public void OnStartClick()
