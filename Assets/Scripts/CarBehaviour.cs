@@ -36,10 +36,11 @@ public class CarBehaviour : MonoBehaviour
     private ParticleSystem.EmissionModule _smokeREmission;
     private bool _carIsOnDrySand = false;
     private bool _carIsOnStone = false;
+    private bool _carSlips = false;
     private string _groundTagFL;
-    private string _groundTagFR;
+    private string _groundTagRL;
     private int _groundTextureFL;
-    private int _groundTextureFR;
+    private int _groundTextureRL;
     private bool _doSkidmarking;
     private AudioSource _brakeAudioSource;
 
@@ -80,9 +81,10 @@ public class CarBehaviour : MonoBehaviour
         _isHeadingForward = Vector3.Angle(_rigidBody.velocity, transform.forward) < 90;
 
         WheelHit hitFL = GetGroundInfos(ref wheelColliderFL, ref _groundTagFL, ref _groundTextureFL);
-        WheelHit hitFR = GetGroundInfos(ref wheelColliderFR, ref _groundTagFR, ref _groundTextureFR);
+        WheelHit hitRL = GetGroundInfos(ref wheelColliderRL, ref _groundTagRL, ref _groundTextureRL);
         _carIsOnDrySand = _groundTagFL.CompareTo("Terrain") == 0 && _groundTextureFL == 0;
         _carIsOnStone = _groundTagFL.CompareTo("Terrain") == 0 && _groundTextureFL == 2;
+        _carSlips = hitRL.sidewaysSlip > 0.3f || hitRL.sidewaysSlip < -0.3f;
 
         _doSkidmarking = false;
 
@@ -110,7 +112,7 @@ public class CarBehaviour : MonoBehaviour
         }
 
         SetBrakeSound(_doSkidmarking);
-        SetSkidmarking(_doSkidmarking);
+        SetSkidmarking(_doSkidmarking || _carSlips);
 
         SetSteerAngle(maxSteerAngle * Input.GetAxis("Horizontal"));
 

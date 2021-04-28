@@ -42,7 +42,7 @@ public class WheelBehaviour : MonoBehaviour
             _skidmarkLast = skidmarks.Add(
                 hit.point + wheelVelo * Time.deltaTime,
                 hit.normal,
-                0.5f,
+                (hit.force - 1000) / 10000,
                 _skidmarkLast
             );
             _skidmarkLastPos = hit.point;

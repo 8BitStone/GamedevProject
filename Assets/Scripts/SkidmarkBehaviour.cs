@@ -101,8 +101,6 @@ public class SkidmarkBehaviour : MonoBehaviour
 		
 		numMarks++;
 		updateMesh = true;
-
-        Debug.Log("numMarks:" + numMarks);
 		
 		// return index of the new mark
 		return numMarks - 1;
